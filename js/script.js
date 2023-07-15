@@ -3,7 +3,11 @@ function checkJsWorking() {
 }
 checkJsWorking();
 
+import Scroll from "./modules/scroll.js";
 import Accordion from "./modules/accordion.js";
+
+const scroll = new Scroll("[data-scroll='on']");
+scroll.init();
 
 const accordion = new Accordion(".faq-lista");
 accordion.init();

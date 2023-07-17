@@ -1,6 +1,27 @@
+import debounce from "./debounce.js";
+
 export default class Scroll {
   constructor(elements) {
     this.elements = [...document.querySelectorAll(elements)];
+    this.distances;
+  }
+
+  checkVisible(scrollY, elementDistance, halfWindowHeight) {
+    if (scrollY < elementDistance - halfWindowHeight) return false;
+    else return true;
+  }
+
+  checkDistance() {
+    this.distances.forEach((element) => {
+      const halfWindowHeight = window.innerHeight * 0.6;
+      const visible = this.checkVisible(
+        window.scrollY,
+        element.distance,
+        halfWindowHeight
+      );
+      if (visible) element.element.dataset.scroll = "on";
+      else element.element.dataset.scroll = "off";
+    });
   }
 
   getDistances() {
@@ -9,8 +30,15 @@ export default class Scroll {
     });
   }
 
+  binder() {
+    this.checkDistance = debounce(this.checkDistance.bind(this), 50);
+  }
+
   init() {
     this.getDistances();
-    console.log(this.distances);
+    this.binder();
+    window.addEventListener("scroll", this.checkDistance);
+    this.elements[0].dataset.scroll = "on";
+    return this;
   }
 }

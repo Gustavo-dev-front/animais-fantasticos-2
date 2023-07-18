@@ -1,3 +1,5 @@
+@import url(./animations.css);
+
 .animais h2 {
   font-family: "IBM Plex Mono", monospace;
   font-size: 1rem;
@@ -50,4 +52,11 @@
   margin-bottom: 3rem;
 }
 
+.js-working .animais-descricao [data-animal] {
+  display: none;
+  animation: 0.3s forwards to-right;
+}
 
+.js-working .animais-descricao [data-animal].active {
+  display: block;
+}

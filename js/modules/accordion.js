@@ -23,5 +23,6 @@ export default class Accordion {
     this.binder();
     this.addListener();
     this.questions[0].classList.add(this.activeClass);
+    return this;
   }
 }

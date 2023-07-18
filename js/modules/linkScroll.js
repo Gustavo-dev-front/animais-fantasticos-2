@@ -18,5 +18,6 @@ export default class LinkScroll {
 
   init() {
     this.listener();
+    return this;
   }
 }

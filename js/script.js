@@ -7,6 +7,7 @@ import Scroll from "./modules/scroll.js";
 import LinkScroll from "./modules/linkScroll.js";
 import AnimalsNav from "./modules/animalsNav.js";
 import Accordion from "./modules/accordion.js";
+import Modal from "./modules/modal.js";
 
 const scroll = new Scroll("[data-scroll]");
 scroll.init();
@@ -19,3 +20,10 @@ animalsNav.init();
 
 const accordion = new Accordion(".faq-lista");
 accordion.init();
+
+const modal = new Modal(
+  "[data-modal='open']",
+  "[data-modal='close']",
+  ".modal"
+);
+modal.init();

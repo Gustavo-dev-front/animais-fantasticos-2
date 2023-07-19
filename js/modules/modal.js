@@ -6,23 +6,26 @@ export default class Modal {
   }
 
   closeModal(event) {
-    event.preventDefault();
+    if (event) event.preventDefault();
     this.modal.style.display = "none";
   }
 
-  activeModal(event) {
+  openModal(event) {
     event.preventDefault();
     this.modal.style.display = "grid";
   }
 
   binder() {
-    this.activeModal = this.activeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
   listener() {
-    this.button.addEventListener("click", this.activeModal);
+    this.button.addEventListener("click", this.openModal);
     this.buttonClose.addEventListener("click", this.closeModal);
+    this.modal.addEventListener("click", (event) => {
+      if (event.target === this.modal) this.closeModal();
+    });
   }
 
   init() {

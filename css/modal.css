@@ -1,0 +1,46 @@
+.modal {
+  position: fixed;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.modal form {
+  justify-self: center;
+  font-family: "IBM Plex mono", monospace;
+  width: 80vw;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px;
+  position: relative;
+}
+
+.modal form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal form input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgba(255, 186, 102, 0.596);
+  border-radius: 4px;
+}
+
+.modal form input:focus {
+  outline: none;
+}
+
+.modal form::after {
+  content: url(../img/close.svg);
+  cursor: pointer;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}

@@ -5,6 +5,7 @@
 @import url(./faq.css);
 @import url(./contato.css);
 @import url(./copy.css);
+@import url(./modal.css);
 
 body {
   background: #faf6ed;

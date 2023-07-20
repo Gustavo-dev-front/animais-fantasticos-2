@@ -1,0 +1,33 @@
+{
+  "animais": [
+    {
+      "nome": "Raposa",
+      "quantidade": 17129
+    },
+
+    {
+      "nome": "Esquilo",
+      "quantidade": 26345
+    },
+
+    {
+      "nome": "Urso",
+      "quantidade": 3243
+    },
+
+    {
+      "nome": "Lobo",
+      "quantidade": 5890
+    },
+
+    {
+      "nome": "Macaco",
+      "quantidade": 11582
+    },
+
+    {
+      "nome": "Leão",
+      "quantidade": 2837
+    }
+  ]
+}

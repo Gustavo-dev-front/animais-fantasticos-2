@@ -1,0 +1,17 @@
+#numeros .lista {
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+#numeros .lista h2 {
+  font-family: "Playfair Display SC", georgia;
+  margin-bottom: 10px;
+}
+
+#numeros .lista span {
+  font-family: "Playfair Display SC";
+  font-size: 3rem;
+  color: #ee4455;
+}

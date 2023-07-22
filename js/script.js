@@ -9,6 +9,7 @@ import AnimalsNav from "./modules/animalsNav.js";
 import Accordion from "./modules/accordion.js";
 import Modal from "./modules/modal.js";
 import insertAnimais from "./modules/insertAnimais.js";
+import submenuTouch from "./modules/submenuTouch.js";
 
 const scroll = new Scroll("[data-scroll]");
 scroll.init();
@@ -30,3 +31,4 @@ const modal = new Modal(
 modal.init();
 
 insertAnimais();
+submenuTouch(".sobre");

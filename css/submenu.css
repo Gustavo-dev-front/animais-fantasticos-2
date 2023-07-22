@@ -1,0 +1,17 @@
+.submenu {
+  position: absolute;
+  display: none;
+  font-family: "IBM Plex Mono", monospace;
+  background-color: #ee5544;
+  z-index: 1;
+}
+
+.sobre:hover .submenu,
+.sobre.ativo .submenu {
+  display: grid;
+}
+
+.submenu * {
+  padding: 10px 20px;
+  cursor: pointer;
+}
